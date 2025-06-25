@@ -178,7 +178,7 @@ impl<'a, T> CharPositions<'a, T> {
     }
 }
 
-impl<'a, T> Iterator for CharPositions<'a, T>
+impl<T> Iterator for CharPositions<'_, T>
 where
     LineColByteRange: Into<T>,
 {
