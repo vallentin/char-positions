@@ -116,6 +116,8 @@
 //!
 //! [`.char_indicies()`]: https://doc.rust-lang.org/std/primitive.str.html#method.char_indices
 //!
+//! [`char`]: https://doc.rust-lang.org/std/primitive.char.html
+//! [`usize`]: https://doc.rust-lang.org/std/primitive.usize.html
 //! [`std::ops::Range<usize>`]: https://doc.rust-lang.org/std/ops/struct.Range.html
 
 #![no_std]
