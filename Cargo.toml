@@ -1,0 +1,9 @@
+[package]
+name = "char-positions"
+version = "0.1.0"
+edition = "2021"
+description = "Iterate chars and their positions, i.e. line, column, and byte ranges"
+license = "MIT"
+
+[dependencies]
+char-ranges = "0.1.2"
