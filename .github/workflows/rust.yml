@@ -1,0 +1,50 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+env:
+  RUSTFLAGS: -Dwarnings
+  RUSTDOCFLAGS: -Dwarnings
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    name: Rust ${{matrix.rust}} on ${{matrix.os}}
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        rust: [ stable, beta, nightly ]
+    timeout-minutes: 45
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+
+    - run: rustc -vV
+    - run: cargo -vV
+
+    - run: cargo check
+    - run: cargo build
+
+    - run: cargo build --examples
+    - run: cargo check --examples
+    - run: cargo run --example example
+
+    - run: cargo test
+
+    - run: cargo clippy
+
+    - run: cargo fmt --all -- --check
+
+    - run: cargo doc --all --no-deps --all-features
+
+    - run: cargo +nightly rustdoc -- -Z unstable-options --check
+      if: matrix.rust == 'nightly'
