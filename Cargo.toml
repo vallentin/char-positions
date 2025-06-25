@@ -3,7 +3,15 @@ name = "char-positions"
 version = "0.1.0"
 edition = "2021"
 description = "Iterate chars and their positions, i.e. line, column, and byte ranges"
+documentation = "https://docs.rs/char-positions"
+keywords = ["text", "char", "range", "no-std"]
+categories = ["algorithms", "text-processing", "no-std"]
+repository = "https://github.com/vallentin/char-positions"
 license = "MIT"
+readme = "README.md"
+
+[badges]
+maintenance = { status = "passively-maintained" }
 
 [dependencies]
 char-ranges = "0.1.2"
