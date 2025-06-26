@@ -1,5 +1,11 @@
 # char-positions
 
+[![CI](https://github.com/vallentin/char-positions/actions/workflows/rust.yml/badge.svg)](https://github.com/vallentin/char-positions/actions/workflows/rust.yml)
+[![Latest Version](https://img.shields.io/crates/v/char-positions.svg)](https://crates.io/crates/char-positions)
+[![Docs](https://docs.rs/char-positions/badge.svg)](https://docs.rs/char-positions)
+[![dependency status](https://deps.rs/repo/github/vallentin/char-positions/status.svg)](https://deps.rs/repo/github/vallentin/char-positions)
+[![License](https://img.shields.io/github/license/vallentin/char-positions.svg)](https://github.com/vallentin/char-positions)
+
 <!-- cargo-rdme start -->
 
 Similar to the standard library's [`.char_indicies()`], but instead of only
